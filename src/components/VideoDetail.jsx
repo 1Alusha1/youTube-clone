@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
-import { CheckCircle, Opacity } from "@mui/icons-material";
+import { CheckCircle } from "@mui/icons-material";
 
 import { Videos } from "./";
 import { fetchFromAPI } from "../utils/fetchFromApi";
@@ -32,7 +32,7 @@ const VideoDetail = () => {
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
-        <Box flex={1} p='10px'>
+        <Box flex={1} p="10px">
           <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
@@ -51,10 +51,7 @@ const VideoDetail = () => {
               px={2}
             >
               <Link to={`/channel/${channelId}`}>
-                <Typography
-                  variant='subtitle1'
-                  color="#fff"
-                >
+                <Typography variant="subtitle1" color="#fff">
                   {channelTitle}
                   <CheckCircle
                     sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
